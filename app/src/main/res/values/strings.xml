@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">TeDi</string>
+
+    <string name="next">NEXT</string>
+    <string name="skip">SKIP</string>
+    <string name="start">GOT IT</string>
+
+    <string name="slide_1_title">Selamat Datang</string>
+    <string name="slide_1_desc">TeDi adalah aplikasi yang membantu anak penderita Disleksia
+    untuk meningkatkan kemampuan membaca.</string>
+
+    <string name="slide_2_title">Mengenal Huruf</string>
+    <string name="slide_2_desc">Meningkatkan kemampuan mengenal huruf dan angka untuk anak
+    penderita Disleksia.</string>
+
+    <string name="slide_3_title">Membaca</string>
+    <string name="slide_3_desc">Meningkatkan kemampuan dasar membaca untuk anak Disleksia.</string>
+
+    <string name="slide_4_title">Menulis</string>
+    <string name="slide_4_desc">Meningkatkan kemampuan dasar menulis untuk anak Disleksia.</string>
+    <string name="title_activity_home">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+</resources>

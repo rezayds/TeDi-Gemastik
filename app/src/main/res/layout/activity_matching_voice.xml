@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MatchingVoiceActivity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/letterSpeech"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/mendengar_sign"
+        android:layout_gravity="center"
+        android:layout_marginTop="72dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Huruf apa"
+        android:textSize="28sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="12dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="yang kamu dengar?"
+        android:textSize="28sp"
+        android:layout_gravity="center"
+        android:layout_marginTop="6dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:layout_gravity="center">
+
+        <Button
+            android:id="@+id/firstChoice"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button_small"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="12dp"/>
+
+        <Button
+            android:id="@+id/secondChoice"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_button_small"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:layout_marginHorizontal="12dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
