@@ -18,8 +18,41 @@
 
     <string name="slide_4_title">Menulis</string>
     <string name="slide_4_desc">Meningkatkan kemampuan dasar menulis untuk anak Disleksia.</string>
-    <string name="title_activity_home">MainActivity</string>
+
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_help">Help</string>
+    <string name="title_activity_main2">MainActivity</string>
+
+    <string name="peng_dis_1_title">Apa itu Disleksia?</string>
+    <string name="peng_dis_2_title">Gejala Disleksia</string>
+    <string name="peng_dis_3_title">Apa Penyebab Disleksia</string>
+
+    <string name="peng_dis_1_desc">
+        \n\nDisleksia adalah gangguan dalam proses belajar yang ditandai dengan kesulitan membaca, menulis, atau mengeja. Penderita disleksia akan kesulitan dalam mengidentifikasi kata-kata yang diucapkan, dan mengubahnya menjadi huruf atau kalimat.
+        \n\nDisleksia tergolong gangguan saraf pada bagian otak yang memroses bahasa, dan dapat dijumpai pada anak-anak atau orang dewasa. Meskipun individu dengan disleksia kesulitan dalam belajar, penyakit ini tidak memengaruhi tingkat kecerdasan seseorang.
+    </string>
+
+    <string name="peng_dis_2_desc">
+        Gejala disleksia bisa berbeda pada satu pengidap dengan pengidap lainnya. Gejala ini memang bisa timbul di usia berapapun, tapi umumnya muncul di usia anak-anak. Berikut beberapa gejala disleksia yang mungkin dialami pengidapnya.
+        \n\nKesulitan belajar membaca, walaupun tingkat kecerdasannya normal. Anak disleksia terlihat lebih lamban dan berusaha keras dalam membaca, mempelajari huruf, mengucapkan atau menerka huruf atau angka, serta memposisikan mainan huruf.
+        \n\nKesulitan dan memiliki kemampuan berbicara yang sangat lambat, sehingga membutuhkan waktu lebih lama untuk belajar berbicara. Pengidapnya sering salah saat menguncapkan kata atau membedakan bunyi kata yang berbeda.
+        \n\nPerkembangan lebih lambat dibandingkan anak seusianya. Contohnya, membutuhkan waktu bejalar merangkak, berjalan, atau berbicara yang lebih lama ketimbang anak seusianya.
+        \n\nKesulitan mengkoordinasikan gerak tubuh, sehingga sering terlihat lebih lemah dibandingkan anak lain seusianya. Contohnya, sulit mengkoordinasikan mata dengan gerakan tangan. Kondisi ini bisa diamati ketika mereka menangkap bola.
+        \n\nSulit berkonsentrasi dan cenderung mudah sakit. Mereka juga cenderung lebih mudah terserang alergi, demam, eksim, atau asma.
+    </string>
+
+    <string name="peng_dis_3_desc">
+        Beberapa penyebab disleksia, antara lain:
+        \n\n- Kelainan genetik.
+        \n- Cedera otak, misalnya saat anak dilahirkan.
+        \n- Cedera yang parah atau trauma pada otak.\n
+        \n- Penyakit lainnya, seperti stroke.\n
+    </string>
+
+
+    <!--  Speech Exercise String  -->
+    <string name="speech_level_1">BUDI SEDANG MEMBACA</string>
+    <string name="title_activity_lesson">LessonActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
 </resources>

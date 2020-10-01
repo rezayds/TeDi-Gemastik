@@ -1,19 +1,20 @@
 package id.rezayds.tedi;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import id.rezayds.tedi.Helper.PrefManager;
 
@@ -44,57 +45,15 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
 
-        TextView txtName = findViewById(R.id.userName);
-        String userName = "Halo " + prefManager.getUserName() + "!";
-        txtName.setText(userName);
-
-        CardView cardMeHuruf = findViewById(R.id.cardMeHuruf);
-        cardMeHuruf.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, MatchingVoiceActivity.class));
-            }
-        });
-
-        CardView cardMembaca = findViewById(R.id.cardMembaca);
-        cardMembaca.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, SpeakActivity.class));
-            }
-        });
-
-        CardView cardMenulis = findViewById(R.id.cardMenulis);
-        cardMenulis.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, DrawingActivity.class));
-            }
-        });
-
-        CardView cardHuLengkap = findViewById(R.id.cardHuLengkap);
-        cardHuLengkap.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, SpeakActivity.class));
-            }
-        });
-
-        CardView cardHuKonsonan = findViewById(R.id.cardHuKonsonan);
-        cardHuKonsonan.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, SpeakKonsonanActivity.class));
-            }
-        });
-
-        CardView cardHuVokal = findViewById(R.id.cardHuVokal);
-        cardHuVokal.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this, SpeakVocalActivity.class));
-            }
-        });
+        BottomNavigationView navView = findViewById(R.id.nav_view);
+        // Passing each menu ID as a set of Ids because each
+        // menu should be considered as top level destinations.
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
+                R.id.navigation_home, R.id.navigation_help)
+                .build();
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
+        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+        NavigationUI.setupWithNavController(navView, navController);
     }
 
     public void checkPermission(String permission, int requestCode) {
@@ -106,4 +65,43 @@ public class MainActivity extends AppCompatActivity {
             );
         }
     }
+
+    public void goMeHuruf(View view) {
+        startActivity(new Intent(getApplicationContext(), MatchingVoiceActivity.class));
+    }
+
+    public void goMembaca(View view) {
+//        startActivity(new Intent(getApplicationContext(), SpeakActivity.class));
+//        startActivity(new Intent(getApplicationContext(), SpeechActivity.class));
+        startActivity(new Intent(getApplicationContext(), LessonActivity.class));
+    }
+
+    public void goMenulis(View view) {
+        startActivity(new Intent(getApplicationContext(), DrawingActivity.class));
+    }
+
+    public void goHuLengkap(View view) {
+        startActivity(new Intent(getApplicationContext(), SpeakActivity.class));
+    }
+
+    public void goHuKonsonan(View view) {
+        startActivity(new Intent(getApplicationContext(), SpeakKonsonanActivity.class));
+    }
+
+    public void goHuVokal(View view) {
+        startActivity(new Intent(getApplicationContext(), SpeakVocalActivity.class));
+    }
+
+    public void goPengDis1(View view) {
+        startActivity(new Intent(getApplicationContext(), PengDisleksiaSatu.class));
+    }
+
+    public void goPengDis2(View view) {
+        startActivity(new Intent(getApplicationContext(), PengDisleksiaDua.class));
+    }
+
+    public void goPengDis3(View view) {
+        startActivity(new Intent(getApplicationContext(), PengDisleksiaTiga.class));
+    }
+
 }
