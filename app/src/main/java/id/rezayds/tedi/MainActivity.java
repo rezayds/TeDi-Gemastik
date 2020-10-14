@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -16,7 +18,8 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import id.rezayds.tedi.Helper.PrefManager;
+import id.rezayds.tedi.helper.DatabaseHandler;
+import id.rezayds.tedi.helper.PrefManager;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
             finish();
         }
 
-        if (prefManager.getUserName().equals("")) {
-            prefManager.setUserName("");
+        DatabaseHandler db = new DatabaseHandler(this);
+        if (db.getCount() == 0) {
             startActivity(new Intent(MainActivity.this, InputNameActivity.class));
             finish();
         }
@@ -67,13 +70,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goMeHuruf(View view) {
-        startActivity(new Intent(getApplicationContext(), MatchingVoiceActivity.class));
+//        startActivity(new Intent(getApplicationContext(), MatchingVoiceActivity.class));
+        startActivity(new Intent(getApplicationContext(), LessonActivity.class));
     }
 
+
     public void goMembaca(View view) {
-//        startActivity(new Intent(getApplicationContext(), SpeakActivity.class));
-//        startActivity(new Intent(getApplicationContext(), SpeechActivity.class));
-        startActivity(new Intent(getApplicationContext(), LessonActivity.class));
+//        startActivity(new Intent(getApplicationContext(), MatchingWordActivity.class));
+        startActivity(new Intent(getApplicationContext(), MainActivity2.class));
     }
 
     public void goMenulis(View view) {

@@ -1,39 +1,38 @@
 package id.rezayds.tedi;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
+
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
-import androidx.viewpager.widget.ViewPager;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-
-import id.rezayds.tedi.ui.main.SectionsPagerAdapter;
+import id.rezayds.tedi.ui.lesson.MeHurufFragment;
+import id.rezayds.tedi.ui.lesson.MembacaFragment;
+import id.rezayds.tedi.ui.lesson.MenulisFragment;
+import id.rezayds.tedi.ui.lesson.TabAdapter;
 
 public class LessonActivity extends AppCompatActivity {
+
+    private TabAdapter adapter;
+    private TabLayout tabLayout;
+    private ViewPager viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_lesson);
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
-        ViewPager viewPager = findViewById(R.id.view_pager);
-        viewPager.setAdapter(sectionsPagerAdapter);
-        TabLayout tabs = findViewById(R.id.tabs);
-        tabs.setupWithViewPager(viewPager);
-        FloatingActionButton fab = findViewById(R.id.fab);
+        getSupportActionBar().hide();
 
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        viewPager = findViewById(R.id.viewPager);
+        tabLayout = findViewById(R.id.tabLayout);
+
+        adapter = new TabAdapter(getSupportFragmentManager());
+        adapter.addFragment(new MeHurufFragment(), "Mengenal Huruf");
+        adapter.addFragment(new MembacaFragment(), "Membaca");
+        adapter.addFragment(new MenulisFragment(), "Menulis");
+
+        viewPager.setAdapter(adapter);
+        tabLayout.setupWithViewPager(viewPager);
     }
 }

@@ -19,7 +19,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import id.rezayds.tedi.Helper.PrefManager;
+import id.rezayds.tedi.helper.PrefManager;
 
 public class Welcome extends AppCompatActivity {
 

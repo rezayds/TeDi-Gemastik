@@ -4,12 +4,14 @@
 <!--    <color name="colorPrimaryDark">#3700B3</color>-->
 <!--    <color name="colorAccent">#03DAC5</color>-->
 
-    <color name="colorPrimary">#B6EB7A</color>
-    <color name="colorPrimaryDark">#74BD21</color>
+    <color name="colorPrimary">#74BD21</color>
+    <color name="colorPrimaryDark">#74BD11</color>
+    <color name="colorPrimaryLight">#B6EB7A</color>
     <color name="colorAccent">#FFF500</color>
     <color name="colorDisable">#cccccc</color>
 
     <color name="bg_mainactivity">#d4e6e3</color>
+
     <!-- Screens background color-->
     <color name="bg_screen1">#d4e6e3</color>
     <color name="bg_screen2">#d4e6e3</color>
@@ -21,6 +23,9 @@
     <color name="dot_dark_screen2">#B6EB7A</color>
     <color name="dot_dark_screen3">#B6EB7A</color>
     <color name="dot_dark_screen4">#B6EB7A</color>
+
+    <color name="colorNavigationIcon">#dae9f6</color>
+    <color name="colorNavigationText">#ffffff</color>
 
 
     <!-- dots active colors -->

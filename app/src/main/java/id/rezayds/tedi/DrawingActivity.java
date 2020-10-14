@@ -28,7 +28,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 import cn.pedant.SweetAlert.SweetAlertDialog;
-import id.rezayds.tedi.Process.DrawingCanvas;
+import id.rezayds.tedi.process.DrawingCanvas;
 
 public class DrawingActivity extends AppCompatActivity {
 

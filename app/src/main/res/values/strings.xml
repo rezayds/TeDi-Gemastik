@@ -53,6 +53,13 @@
     <!--  Speech Exercise String  -->
     <string name="speech_level_1">BUDI SEDANG MEMBACA</string>
     <string name="title_activity_lesson">LessonActivity</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+
+    <!--  Lesson Activity String  -->
+    <string name="tab_text_1">Mengenal Huruf</string>
+    <string name="tab_text_2">Membaca</string>
+    <string name="tab_text_3">Menulis</string>
+
+    <!--  Bottom Nav String  -->
+    <string name="bot_nav_1">Home</string>
+    <string name="bot_nav_2">Knowledge</string>
 </resources>

@@ -10,8 +10,8 @@
     <ImageView
         android:id="@+id/letterSpeech"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/mendengar_sign"
+        android:layout_height="256dp"
+        android:src="@drawable/ic_click_headphone"
         android:layout_gravity="center"
         android:layout_marginTop="72dp" />
 

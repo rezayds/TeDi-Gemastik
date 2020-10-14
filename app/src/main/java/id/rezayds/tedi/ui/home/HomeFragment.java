@@ -4,14 +4,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
-import id.rezayds.tedi.Helper.PrefManager;
+import id.rezayds.tedi.helper.DatabaseHandler;
 import id.rezayds.tedi.R;
 
 public class HomeFragment extends Fragment {
@@ -24,10 +26,12 @@ public class HomeFragment extends Fragment {
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
-        PrefManager prefManager = new PrefManager(getActivity());
-        final String userName = "Halo " + prefManager.getUserName() + "!";
+        DatabaseHandler db = new DatabaseHandler(getActivity());
+        final String userName = "Halo " + db.getName() + "!";
 
         final TextView txtName = root.findViewById(R.id.userName);
+        final ImageView ava = root.findViewById(R.id.ava);
+
         homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
@@ -35,7 +39,6 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        ;
         return root;
     }
 }

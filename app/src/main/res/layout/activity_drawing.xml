@@ -10,7 +10,7 @@
         android:padding="120dp"
         android:src="@drawable/menulis_b" />
 
-    <id.rezayds.tedi.Process.DrawingCanvas
+    <id.rezayds.tedi.process.DrawingCanvas
         android:id ="@+id/draw"
         android:layout_width="480dp"
         android:layout_height="420dp"/>
